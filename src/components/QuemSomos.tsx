@@ -9,6 +9,7 @@ import imgShows from "@/assets/realizacao-shows.png";
 import imgBrasilie from "@/assets/realizacao-brasilie.png";
 import imgPoemasAmor from "@/assets/realizacao-poemas-amor.png";
 import imgHistoriasFantasticas from "@/assets/realizacao-historias-fantasticas.png";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const realizacoes = [
   {
@@ -64,9 +65,11 @@ const realizacoes = [
 ];
 
 const QuemSomos = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section className="bg-navy py-12 md:py-16">
-      <div className="container mx-auto px-4">
+      <div ref={ref} className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         {/* Header: Title left + Logo right - centered closer together */}
         <div className="flex items-center justify-center gap-8 md:gap-16 mb-8">
           <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-foreground">

@@ -1,7 +1,11 @@
+import useScrollAnimation from "@/hooks/useScrollAnimation";
+
 const Footer = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <footer className="bg-navy border-t-4 border-orange">
-      <div className="container mx-auto px-4 py-10 text-center">
+      <div ref={ref} className={`container mx-auto px-4 py-10 text-center ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <h3 className="font-heading text-2xl font-bold text-primary-foreground mb-6">
           CONTATOS ARTICULE
         </h3>

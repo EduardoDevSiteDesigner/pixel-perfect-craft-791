@@ -1,20 +1,20 @@
 import authorSigning from "@/assets/author-signing.jpg";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const PremiacaoSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section className="bg-orange py-12 md:py-16">
-      <div className="container mx-auto px-4">
-        {/* Author image */}
+      <div ref={ref} className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="max-w-2xl mx-auto mb-12">
           <div className="border-4 border-primary-foreground rounded-lg overflow-hidden shadow-xl">
             <img src={authorSigning} alt="Autor autografando livro" className="w-full h-64 md:h-96 object-cover" />
           </div>
         </div>
 
-        {/* Premiação title */}
         <h2 className="font-heading text-5xl md:text-7xl font-extrabold text-navy mb-8">PREMIAÇÃO</h2>
 
-        {/* Winner section */}
         <div className="bg-navy text-primary-foreground p-8 md:p-12 rounded-lg mb-8">
           <h3 className="font-heading text-3xl md:text-4xl font-bold mb-4">
             O AUTOR(A) VENCEDOR(A)
@@ -27,7 +27,6 @@ const PremiacaoSection = () => {
           </p>
         </div>
 
-        {/* Regulamento */}
         <div className="text-center">
           <button className="bg-yellow text-navy font-heading text-2xl font-bold py-4 px-12 border-2 border-navy hover:bg-yellow/90 transition-colors">
             REGULAMENTO
