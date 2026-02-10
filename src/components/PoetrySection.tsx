@@ -15,7 +15,7 @@ const PoetrySection = () => {
 
       {/* Orange text block */}
       <section className="bg-orange py-12 md:py-16">
-        <div className="container mx-auto px-4 text-navy text-lg md:text-xl leading-relaxed space-y-6 max-w-4xl">
+        <div className="container mx-auto px-4 text-navy text-xl md:text-2xl leading-relaxed space-y-6 max-w-4xl" style={{ textAlign: 'justify', hyphens: 'auto' }}>
           <p>
             Um <strong>POEMA DE AMOR</strong> não fala apenas de romance, mas também de empatia, compaixão, ternura e esperança. Esses elementos, quando semeados no coração das pessoas, podem gerar mudanças significativas na forma como nos relacionamos uns com os outros e com o mundo ao nosso redor.
           </p>
@@ -37,7 +37,7 @@ const PoetrySection = () => {
 
       {/* Light blue text */}
       <section className="bg-sky/30 py-12">
-        <div className="container mx-auto px-4 text-navy text-lg md:text-xl leading-relaxed max-w-4xl">
+        <div className="container mx-auto px-4 text-navy text-xl md:text-2xl leading-relaxed max-w-4xl" style={{ textAlign: 'justify', hyphens: 'auto' }}>
           <p>
             Além disso, a poesia é um refúgio em tempos de dor e angústia. Para quem sofre, um poema de amor pode ser um alento, um bálsamo que ressignifica a experiência do sofrimento e da solidão.
           </p>
@@ -58,7 +58,7 @@ const PoetrySection = () => {
 
       {/* Final text */}
       <section className="bg-sky py-12">
-        <div className="container mx-auto px-4 text-navy text-lg md:text-xl leading-relaxed max-w-4xl">
+        <div className="container mx-auto px-4 text-navy text-xl md:text-2xl leading-relaxed max-w-4xl" style={{ textAlign: 'justify', hyphens: 'auto' }}>
           <p>
             O mundo precisa de soluções práticas, mas também precisa de beleza, de sonho, de emoção. E é na poesia que o amor se torna uma linguagem universal, capaz de curar feridas invisíveis e abrir caminhos para um futuro mais harmonioso.
           </p>
