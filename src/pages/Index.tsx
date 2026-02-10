@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import ActionButtons from "@/components/ActionButtons";
 import VideoSection from "@/components/VideoSection";
 import BienalBanner from "@/components/BienalBanner";
+import BienalCTA from "@/components/BienalCTA";
 import AboutSection from "@/components/AboutSection";
 import PoetrySection from "@/components/PoetrySection";
 import PremiacaoSection from "@/components/PremiacaoSection";
@@ -21,6 +22,7 @@ const Index = () => {
       </div>
       <VideoSection />
       <BienalBanner />
+      <BienalCTA />
       <div id="sobre">
         <AboutSection />
       </div>

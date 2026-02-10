@@ -5,21 +5,27 @@ const HeroSection = () => {
     <section className="relative overflow-hidden min-h-[90vh] flex items-center" style={{
       background: 'linear-gradient(135deg, hsl(280 60% 25%), hsl(300 50% 35%), hsl(270 55% 45%), hsl(290 40% 55%))'
     }}>
-      {/* Sparkle particles */}
+      {/* Falling sparkle particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {Array.from({ length: 30 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-yellow rounded-full animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${1.5 + Math.random() * 2}s`,
-              opacity: 0.4 + Math.random() * 0.6,
-            }}
-          />
-        ))}
+        {Array.from({ length: 40 }).map((_, i) => {
+          const left = Math.random() * 100;
+          const duration = 4 + Math.random() * 6;
+          const delay = Math.random() * 8;
+          const size = 1 + Math.random() * 2;
+          return (
+            <div
+              key={i}
+              className="absolute bg-yellow rounded-full"
+              style={{
+                left: `${left}%`,
+                width: `${size}px`,
+                height: `${size}px`,
+                opacity: 0,
+                animation: `falling ${duration}s ${delay}s infinite`,
+              }}
+            />
+          );
+        })}
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
@@ -36,7 +42,7 @@ const HeroSection = () => {
             </h2>
             <a
               href="#inscricao"
-              className="inline-block bg-yellow text-navy font-heading text-2xl md:text-3xl font-bold py-5 px-14 border-2 border-navy hover:bg-yellow/90 transition-colors rounded-md"
+              className="inline-block bg-yellow text-navy font-heading text-2xl md:text-3xl font-bold py-5 px-14 hover:bg-yellow/90 transition-colors rounded-full"
             >
               INSCREVA-SE AGORA
             </a>

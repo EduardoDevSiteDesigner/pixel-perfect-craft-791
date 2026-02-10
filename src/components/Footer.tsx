@@ -14,7 +14,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 pt-6 border-t border-primary-foreground/20">
           <p className="text-primary-foreground/60 text-sm">
-            Copyright 2025 Todos os direitos reservados.
+            Copyright 2026 Todos os direitos reservados.
           </p>
         </div>
       </div>
