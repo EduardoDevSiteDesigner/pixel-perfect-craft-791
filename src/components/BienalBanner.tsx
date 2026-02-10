@@ -6,10 +6,10 @@ const BienalBanner = () => {
   return (
     <section className="bg-orange py-12 md:py-16">
       <div ref={ref} className={`container mx-auto px-4 text-center ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
-        <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-navy leading-tight mb-10">
+        <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight mb-10">
           TODOS OS AUTORES PARTICIPANTES<br />
           TERÃO HORÁRIO PARA AUTÓGRAFOS<br />
-          NA <span className="text-sky">BIENAL DE SÃO PAULO 2026.</span>
+          NA BIENAL DE SÃO PAULO 2026.
         </h2>
         <a
           href="#inscricao"

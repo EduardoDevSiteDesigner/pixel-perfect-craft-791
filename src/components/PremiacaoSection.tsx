@@ -7,9 +7,9 @@ const PremiacaoSection = () => {
   return (
     <section className="bg-orange py-12 md:py-16">
       <div ref={ref} className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
-        <div className="max-w-2xl mx-auto mb-12">
+        <div className="max-w-3xl mx-auto mb-12">
           <div className="border-4 border-primary-foreground rounded-lg overflow-hidden shadow-xl">
-            <img src={authorSigning} alt="Autor autografando livro" className="w-full h-64 md:h-96 object-cover" />
+            <img src={authorSigning} alt="Autor autografando livro" className="w-full h-80 md:h-[500px] object-cover" />
           </div>
         </div>
 
@@ -28,7 +28,7 @@ const PremiacaoSection = () => {
         </div>
 
         <div className="text-center">
-          <button className="bg-yellow text-navy font-heading text-3xl md:text-4xl font-bold py-5 px-16 rounded-full hover:bg-yellow/90 transition-colors shadow-lg">
+          <button className="bg-yellow text-navy font-heading text-4xl md:text-6xl font-bold py-8 px-24 rounded-full hover:bg-yellow/90 transition-colors shadow-lg">
             REGULAMENTO
           </button>
           <p className="text-navy mt-3 text-sm">Clique no botão acima e leia o REGULAMENTO.</p>

@@ -17,7 +17,7 @@ const AboutSection = () => {
               />
             </div>
             <div className="flex-1">
-              <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-navy text-right leading-tight mb-8">
+              <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-navy text-left leading-tight mb-8">
                 DESCUBRA POR QUE<br />O MUNDO PRECISA<br />DOS POETAS.
               </h2>
             </div>

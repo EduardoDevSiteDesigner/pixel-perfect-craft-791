@@ -7,6 +7,7 @@ import AboutSection from "@/components/AboutSection";
 import PoetrySection from "@/components/PoetrySection";
 import ClientesCarousel from "@/components/ClientesCarousel";
 import PremiacaoSection from "@/components/PremiacaoSection";
+import FAQSection from "@/components/FAQSection";
 import BienalGallery from "@/components/BienalGallery";
 import KitsSection from "@/components/KitsSection";
 import InscricaoForm from "@/components/InscricaoForm";
@@ -30,6 +31,7 @@ const Index = () => {
       <div id="premiacao">
         <PremiacaoSection />
       </div>
+      <FAQSection />
       <BienalGallery />
       <div id="kits">
         <KitsSection />
