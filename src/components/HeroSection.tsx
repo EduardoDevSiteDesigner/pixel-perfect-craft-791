@@ -2,7 +2,7 @@ import mockupHero from "@/assets/mockup-hero.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center pt-4" style={{
+    <section className="relative overflow-hidden min-h-[80vh] flex items-start pt-2" style={{
       background: 'linear-gradient(135deg, hsl(280 60% 25%), hsl(300 50% 35%), hsl(270 55% 45%), hsl(290 40% 55%))'
     }}>
       {/* Falling sparkle particles */}
@@ -28,7 +28,7 @@ const HeroSection = () => {
         })}
       </div>
 
-      <div className="container mx-auto px-4 py-8 relative z-10">
+      <div className="container mx-auto px-4 py-2 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
           <div className="flex-1 text-primary-foreground text-center md:text-left">
             <p className="font-heading text-2xl md:text-3xl tracking-widest mb-4 opacity-80">
@@ -47,7 +47,7 @@ const HeroSection = () => {
               INSCREVA-SE AGORA
             </a>
           </div>
-          <div className="flex-shrink-0 w-[400px] md:w-[800px] lg:w-[1100px] xl:w-[1300px] md:-ml-24 lg:-ml-32">
+          <div className="flex-shrink-0 w-[350px] md:w-[600px] lg:w-[800px] xl:w-[950px] md:-ml-16 lg:-ml-24">
             <img
               src={mockupHero}
               alt="Livro Poemas de Amor para Curar o Mundo - Volume II"
