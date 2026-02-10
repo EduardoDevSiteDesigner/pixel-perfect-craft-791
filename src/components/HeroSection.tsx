@@ -47,7 +47,7 @@ const HeroSection = () => {
               INSCREVA-SE AGORA
             </a>
           </div>
-          <div className="flex-shrink-0 w-80 md:w-[500px] lg:w-[650px]">
+          <div className="flex-shrink-0 w-[320px] md:w-[600px] lg:w-[800px] xl:w-[900px] md:-ml-16 lg:-ml-24">
             <img
               src={mockupHero}
               alt="Livro Poemas de Amor para Curar o Mundo - Volume II"
