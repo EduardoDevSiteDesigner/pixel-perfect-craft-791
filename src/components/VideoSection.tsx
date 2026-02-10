@@ -1,11 +1,31 @@
 const VideoSection = () => {
   return (
-    <section className="bg-navy py-16">
-      <div className="container mx-auto px-4">
-        <p className="font-script text-xl md:text-2xl text-primary-foreground leading-relaxed mb-8">
-          Assista e saiba mais sobre a antologia{" "}
-          <span className="text-yellow">'poemas de amor para curar o mundo'</span>
-        </p>
+    <section className="relative py-16 overflow-hidden" style={{
+      background: 'linear-gradient(135deg, hsl(280 60% 25%), hsl(300 50% 35%), hsl(270 55% 45%), hsl(290 40% 55%))'
+    }}>
+      {/* Falling sparkle particles */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {Array.from({ length: 20 }).map((_, i) => {
+          const left = Math.random() * 100;
+          const duration = 4 + Math.random() * 6;
+          const delay = Math.random() * 8;
+          const size = 1 + Math.random() * 2;
+          return (
+            <div
+              key={i}
+              className="absolute bg-yellow rounded-full"
+              style={{
+                left: `${left}%`,
+                width: `${size}px`,
+                height: `${size}px`,
+                opacity: 0,
+                animation: `falling ${duration}s ${delay}s infinite`,
+              }}
+            />
+          );
+        })}
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
             <iframe

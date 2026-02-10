@@ -96,3 +96,20 @@
     font-family: 'Oswald', sans-serif;
   }
 }
+
+@keyframes falling {
+  0% {
+    top: -5%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    top: 105%;
+    opacity: 0;
+  }
+}

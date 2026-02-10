@@ -6,7 +6,7 @@ const KitsSection = () => {
         "01 (um) texto a ser publicado",
         "02 (dois) livros impressos 'POEMAS DE AMOR PARA CURAR O MUNDO'",
         "02 (dois) marcadores",
-        "Participação como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO RIO 2025",
+        "Participação como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026",
         "Certificado de participação",
       ],
       price: "R$ 247,00",
@@ -17,9 +17,9 @@ const KitsSection = () => {
         "01 (um) texto a ser publicado",
         "05 (cinco) livros 'POEMAS DE AMOR PARA CURAR O MUNDO'",
         "05 (cinco) marcadores",
-        "Participação como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO RIO 2025",
+        "Participação como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026",
         "Certificado de participação",
-        "Fotografia de 5 fotos digitais de sua participação como autor(a) na BIENAL DO LIVRO RIO 2025",
+        "Fotografia de 5 fotos digitais de sua participação como autor(a) na BIENAL DO LIVRO SÃO PAULO 2026",
       ],
       price: "R$ 497,00",
       installments: "OU 12 X R$ 49,00 no cartão de crédito",
@@ -40,7 +40,7 @@ const KitsSection = () => {
           {kits.map((kit) => (
             <div key={kit.name} className="bg-primary-foreground rounded-lg p-8 shadow-xl">
               <div className="text-center mb-6">
-                <p className="font-heading text-sm tracking-widest text-muted-foreground">ANTOLOGIA 2025</p>
+                <p className="font-heading text-sm tracking-widest text-muted-foreground">ANTOLOGIA 2026</p>
                 <h3 className="font-heading text-3xl font-bold text-navy mt-2">KIT {kit.name}</h3>
               </div>
               <ul className="space-y-3 mb-8">

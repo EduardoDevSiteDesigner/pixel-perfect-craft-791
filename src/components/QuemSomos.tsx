@@ -52,7 +52,7 @@ const QuemSomos = () => {
             <div>
               <h5 className="font-heading text-xl font-bold text-orange mb-2">Prêmio Brasil - Coletânea Nacional de Literatura</h5>
               <p className="opacity-90">
-                Reuniram escritores de 23 estados, além do Distrito Federal, de 119 cidades brasileiras. Lançamento na BIENAL DO RIO 2025.
+                Reuniram escritores de 23 estados, além do Distrito Federal, de 119 cidades brasileiras. Lançamento na BIENAL DE SÃO PAULO 2026.
               </p>
             </div>
           </div>
