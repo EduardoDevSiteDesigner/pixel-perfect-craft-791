@@ -19,8 +19,8 @@ const Index = () => {
       <div id="inicio">
         <HeroSection />
         <ActionButtons />
+        <VideoSection />
       </div>
-      <VideoSection />
       <BienalBanner />
       <BienalCTA />
       <div id="sobre">
