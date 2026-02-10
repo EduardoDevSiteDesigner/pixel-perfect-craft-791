@@ -3,9 +3,9 @@ import HeroSection from "@/components/HeroSection";
 import ActionButtons from "@/components/ActionButtons";
 import VideoSection from "@/components/VideoSection";
 import BienalBanner from "@/components/BienalBanner";
-import BienalCTA from "@/components/BienalCTA";
 import AboutSection from "@/components/AboutSection";
 import PoetrySection from "@/components/PoetrySection";
+import ClientesCarousel from "@/components/ClientesCarousel";
 import PremiacaoSection from "@/components/PremiacaoSection";
 import KitsSection from "@/components/KitsSection";
 import InscricaoForm from "@/components/InscricaoForm";
@@ -22,7 +22,6 @@ const Index = () => {
         <VideoSection />
       </div>
       <BienalBanner />
-      <BienalCTA />
       <div id="sobre">
         <AboutSection />
       </div>
@@ -37,6 +36,7 @@ const Index = () => {
         <InscricaoForm />
       </div>
       <QuemSomos />
+      <ClientesCarousel />
       <div id="contato">
         <Footer />
       </div>
