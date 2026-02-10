@@ -1,6 +1,8 @@
 import { useState } from "react";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const InscricaoForm = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const [formData, setFormData] = useState({
     nome: "", email: "", pais: "", estado: "", bairro: "", numero: "",
     cpf: "", celular: "", telefone: "", titulo: "", concordo: false,
@@ -13,7 +15,7 @@ const InscricaoForm = () => {
 
   return (
     <section className="bg-sky py-12 md:py-16">
-      <div className="container mx-auto px-4 max-w-2xl">
+      <div ref={ref} className={`container mx-auto px-4 max-w-2xl ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-navy text-center mb-2">
           FORMULÁRIO DE INSCRIÇÃO
         </h2>

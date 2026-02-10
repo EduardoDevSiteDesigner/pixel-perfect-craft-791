@@ -1,13 +1,14 @@
 import mockupAbout from "@/assets/mockup-about.png";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const AboutSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section>
-      {/* Blue text section with book image overlapping into orange above */}
-      <div className="bg-sky py-12 md:py-16 relative">
+      <div ref={ref} className={`bg-sky py-12 md:py-16 relative ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-start gap-8">
-            {/* Book image on the left, overlapping into orange section above */}
             <div className="flex-shrink-0 w-64 md:w-80 lg:w-96 md:-mt-40 relative z-10">
               <img
                 src={mockupAbout}
@@ -15,8 +16,6 @@ const AboutSection = () => {
                 className="w-full drop-shadow-2xl"
               />
             </div>
-
-            {/* Title on the right */}
             <div className="flex-1">
               <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-navy text-right leading-tight mb-8">
                 DESCUBRA POR QUE<br />O MUNDO PRECISA<br />DOS POETAS.

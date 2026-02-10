@@ -1,4 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 import imgLeitura from "@/assets/parceiro-leitura.png";
 import imgPrefeituraRJ from "@/assets/parceiro-prefeitura-rj.png";
@@ -23,20 +24,17 @@ const parceiros = [
 ];
 
 const ClientesCarousel = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section className="bg-primary-foreground py-12 md:py-16">
-      <div className="container mx-auto px-4">
+      <div ref={ref} className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <h3 className="font-heading text-2xl md:text-3xl font-bold text-navy text-center mb-10">
           ALGUNS CLIENTES E PARCEIROS DA ARTICULE NESSES 29 ANOS
         </h3>
 
         <div className="max-w-5xl mx-auto px-12">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
+          <Carousel opts={{ align: "start", loop: true }}>
             <CarouselContent>
               {parceiros.map((parceiro, index) => (
                 <CarouselItem key={index} className="basis-1/3 flex items-center justify-center p-4">

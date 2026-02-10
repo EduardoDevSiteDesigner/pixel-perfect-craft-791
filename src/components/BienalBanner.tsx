@@ -1,7 +1,11 @@
+import useScrollAnimation from "@/hooks/useScrollAnimation";
+
 const BienalBanner = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
     <section className="bg-orange py-12 md:py-16">
-      <div className="container mx-auto px-4 text-center">
+      <div ref={ref} className={`container mx-auto px-4 text-center ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-extrabold text-navy leading-tight mb-10">
           TODOS OS AUTORES PARTICIPANTES<br />
           TERÃO HORÁRIO PARA AUTÓGRAFOS<br />
