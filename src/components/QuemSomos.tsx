@@ -1,15 +1,33 @@
+import logoArticule from "@/assets/logo-articule.png";
+
 const QuemSomos = () => {
   return (
     <section className="bg-navy py-12 md:py-16">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-foreground mb-2">
-          QUEM SOMOS
-        </h2>
-        <p className="text-sky font-script text-2xl mb-2">Porque</p>
-        <h3 className="font-heading text-5xl md:text-6xl font-extrabold text-orange mb-2">
-          ARTICULE
-        </h3>
-        <p className="text-sky font-script text-2xl mb-8">gente pra brilhar.</p>
+      <div className="container mx-auto px-4">
+        {/* Header: Title left + Logo right */}
+        <div className="flex items-center justify-between mb-8">
+          <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-foreground">
+            QUEM SOMOS
+          </h2>
+          <img
+            src={logoArticule}
+            alt="Logo Editora Articule"
+            className="w-32 md:w-48"
+          />
+        </div>
+
+        {/* YouTube Video */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/XXOpnnwbmMo"
+              title="Quem Somos - Editora Articule"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </div>
 
         <div className="text-primary-foreground text-lg leading-relaxed max-w-4xl mx-auto space-y-6 text-left">
           <p>
@@ -17,7 +35,7 @@ const QuemSomos = () => {
           </p>
 
           <h4 className="font-heading text-2xl font-bold text-yellow text-center mt-8">
-            PRINCIPAIS REALIZAÇÕES NESSES 28 ANOS DA ARTICULE
+            PRINCIPAIS REALIZAÇÕES NESSES 29 ANOS DA ARTICULE
           </h4>
 
           <div className="space-y-6 mt-6">
