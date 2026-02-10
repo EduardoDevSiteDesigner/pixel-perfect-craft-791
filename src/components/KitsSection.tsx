@@ -50,7 +50,7 @@ const KitsSection = () => {
             <div key={kit.name} className="bg-sky rounded-lg p-8 md:p-10 shadow-xl overflow-visible relative">
               <div className="flex flex-col md:flex-row gap-6">
                 {/* Left: Title + Items */}
-                <div className="flex-1">
+                <div className="flex-1 md:max-w-[45%]">
                   <h3 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
                     KIT {kit.name}
                   </h3>
@@ -65,18 +65,18 @@ const KitsSection = () => {
                 </div>
 
                 {/* Right: Book image */}
-                <div className="flex-shrink-0 flex flex-col items-center w-full md:w-80">
+                <div className="flex-shrink-0 flex flex-col items-center justify-center flex-1">
                   <img
                     src={kit.image}
                     alt="Livro Poemas de Amor para Curar o Mundo"
-                    className="w-72 md:w-96 drop-shadow-2xl md:-mt-8 md:-mb-8"
+                    className="w-full max-w-[500px] drop-shadow-2xl md:-mt-12 md:-mb-12"
                   />
                 </div>
               </div>
 
               {/* Price */}
-              <div className="mt-8 pt-6 border-t border-primary-foreground/30 flex flex-col md:flex-row items-center gap-4 md:gap-8">
-                <p className="font-heading text-5xl md:text-6xl font-extrabold text-primary-foreground">
+              <div className="mt-8 pt-6 border-t border-primary-foreground/30 flex flex-col items-center gap-2 text-center">
+                <p className="font-heading text-6xl md:text-7xl font-extrabold text-primary-foreground">
                   {kit.price}
                 </p>
                 {kit.installments && (

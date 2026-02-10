@@ -100,7 +100,7 @@ const QuemSomos = () => {
             Em 2026 a Articule completa 29 anos. Responsável pela criação e produção de Projetos Culturais de diversos segmentos, como: Dança, Teatro, Música e Literatura, em diversos formatos: Festivais, Congressos, Seminários, Shows, Publicações Literárias, Ações Educativas e Sociais. Em 2025, a Editora Articule participou como expositora da BIENAL DO LIVRO RIO 2025, recebendo em seu estande, autores de todas as regiões do Brasil, no lançamento das antologias: 'Brasiliê - Coletânea Nacional de Literatura'; 'Poemas de amor para curar o mundo' e 'O livro mágico das histórias fantásticas'.
           </p>
 
-          <h4 className="font-heading text-2xl font-bold text-yellow text-center mt-8">
+          <h4 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-yellow text-center mt-8">
             PRINCIPAIS REALIZAÇÕES NESSES 29 ANOS DA ARTICULE
           </h4>
 
