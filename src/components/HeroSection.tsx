@@ -34,10 +34,10 @@ const HeroSection = () => {
             <p className="font-heading text-2xl md:text-3xl tracking-widest mb-4 opacity-80">
               ANTOLOGIA 2026
             </p>
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-4">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-4 whitespace-nowrap">
               UM NOVO CHAMADO<br />A TODOS OS POETAS.
             </h1>
-            <h2 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-yellow leading-tight mb-10">
+            <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow leading-tight mb-10 whitespace-nowrap">
               LANÇAMENTO NA BIENAL<br />SÃO PAULO 2026.
             </h2>
             <a
