@@ -7,7 +7,15 @@ import img3 from "@/assets/bienal-gallery-3.jpg";
 import img4 from "@/assets/bienal-gallery-4.jpg";
 import img5 from "@/assets/bienal-gallery-5.jpg";
 import img6 from "@/assets/bienal-gallery-6.jpg";
-import bienalStand from "@/assets/bienal-gallery-1.png";
+import img7 from "@/assets/bienal-gallery-7.jpg";
+
+import bot1 from "@/assets/bienal-bottom-1.jpg";
+import bot2 from "@/assets/bienal-bottom-2.jpg";
+import bot3 from "@/assets/bienal-bottom-3.jpg";
+import bot4 from "@/assets/bienal-bottom-4.jpg";
+import bot5 from "@/assets/bienal-bottom-5.jpg";
+import bot6 from "@/assets/bienal-bottom-6.jpg";
+import bot7 from "@/assets/bienal-bottom-7.jpg";
 
 const galleryTop = [
   { image: img1, alt: "Família no estande Articule na Bienal Rio 2025" },
@@ -16,15 +24,17 @@ const galleryTop = [
   { image: img4, alt: "Autoras com livro na Bienal Rio 2025" },
   { image: img5, alt: "Autoras na sessão de autógrafos Bienal Rio 2025" },
   { image: img6, alt: "Autoras com flores na Bienal Rio 2025" },
+  { image: img7, alt: "Anderson Rocha na Bienal do Livro Rio 2025" },
 ];
 
 const galleryBottom = [
-  { image: bienalStand, alt: "Estande Editora Articule na Bienal Rio 2025" },
-  { image: img1, alt: "Bienal Rio 2025 - Momento 2" },
-  { image: img2, alt: "Bienal Rio 2025 - Momento 3" },
-  { image: img3, alt: "Bienal Rio 2025 - Momento 4" },
-  { image: img4, alt: "Bienal Rio 2025 - Momento 5" },
-  { image: img5, alt: "Bienal Rio 2025 - Momento 6" },
+  { image: bot1, alt: "Banner sessão de autógrafos Bienal Rio 2025" },
+  { image: bot2, alt: "Autores no estande Articule Bienal Rio 2025" },
+  { image: bot3, alt: "Autoras com livro Poemas de Amor Bienal Rio 2025" },
+  { image: bot4, alt: "Anderson Rocha com autoras na Bienal Rio 2025" },
+  { image: bot5, alt: "Grupo de autores na Bienal Rio 2025" },
+  { image: bot6, alt: "Autores reunidos no estande Bienal Rio 2025" },
+  { image: bot7, alt: "Autora com livro Poemas de Amor Bienal Rio 2025" },
 ];
 
 const BienalGallery = () => {
@@ -38,8 +48,8 @@ const BienalGallery = () => {
         </h2>
 
         <div className="space-y-10">
-          {/* Top gallery - offset to the left */}
-          <div className="max-w-6xl mx-auto px-12 md:mr-0 md:ml-auto">
+          {/* Top gallery - offset right */}
+          <div className="max-w-6xl px-12 ml-auto">
             <Carousel opts={{ align: "start", loop: true }}>
               <CarouselContent>
                 {galleryTop.map((img, index) => (
@@ -59,8 +69,8 @@ const BienalGallery = () => {
             </Carousel>
           </div>
 
-          {/* Bottom gallery - offset to the right */}
-          <div className="max-w-6xl mx-auto px-12 md:ml-0 md:mr-auto">
+          {/* Bottom gallery - offset left */}
+          <div className="max-w-6xl px-12 mr-auto">
             <Carousel opts={{ align: "start", loop: true }}>
               <CarouselContent>
                 {galleryBottom.map((img, index) => (
