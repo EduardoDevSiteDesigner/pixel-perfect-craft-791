@@ -15,7 +15,12 @@ const Navbar = () => {
           <a href="#inscricao" className="hover:text-orange transition-colors">Inscrição</a>
           <a href="#contato" className="hover:text-orange transition-colors">Contato</a>
         </div>
-        <div className="hidden md:block w-12" />
+        <a
+          href="#inscricao"
+          className="hidden md:inline-block bg-yellow text-navy font-heading text-sm font-bold py-2 px-6 hover:bg-yellow/90 transition-colors rounded-full whitespace-nowrap"
+        >
+          INSCREVA-SE AGORA
+        </a>
       </div>
     </nav>
   );
