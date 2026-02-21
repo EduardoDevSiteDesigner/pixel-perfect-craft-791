@@ -36,12 +36,29 @@ const KitsSection = () => {
   ];
 
   return (
-    <section className="bg-magenta py-12 md:py-16">
-      <div ref={ref} className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
-        <h2 className="font-heading text-5xl md:text-7xl lg:text-8xl font-extrabold text-primary-foreground text-center mb-4">
+    <section className="relative py-12 md:py-16 overflow-hidden" style={{
+      background: 'linear-gradient(135deg, hsl(280 60% 25%), hsl(300 50% 35%), hsl(270 55% 45%), hsl(290 40% 55%))'
+    }}>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {Array.from({ length: 15 }).map((_, i) => {
+          const left = Math.random() * 100;
+          const duration = 4 + Math.random() * 6;
+          const delay = Math.random() * 8;
+          const size = 1 + Math.random() * 2;
+          return (
+            <div key={i} className="absolute bg-yellow rounded-full" style={{
+              left: `${left}%`, width: `${size}px`, height: `${size}px`, opacity: 0,
+              animation: `falling ${duration}s ${delay}s infinite`,
+            }} />
+          );
+        })}
+      </div>
+
+      <div ref={ref} className={`container mx-auto px-4 relative z-10 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
+        <h2 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black text-primary-foreground text-center mb-4">
           KITS DE PUBLICAÇÃO
         </h2>
-        <p className="text-primary-foreground text-center mb-12 text-lg">
+        <p className="text-primary-foreground text-center mb-12 text-2xl md:text-3xl font-heading font-bold">
           SOMENTE PARA AUTORES SELECIONADOS
         </p>
 
@@ -49,7 +66,6 @@ const KitsSection = () => {
           {kits.map((kit) => (
             <div key={kit.name} className="bg-sky rounded-lg p-8 md:p-10 shadow-xl overflow-visible relative">
               <div className="flex flex-col md:flex-row gap-6">
-                {/* Left: Title + Items */}
                 <div className="flex-1 md:max-w-[45%]">
                   <h3 className="font-heading text-3xl md:text-4xl font-bold text-primary-foreground mb-6">
                     KIT {kit.name}
@@ -63,26 +79,14 @@ const KitsSection = () => {
                     ))}
                   </ul>
                 </div>
-
-                {/* Right: Book image */}
                 <div className="flex-shrink-0 flex flex-col items-center justify-center flex-1">
-                  <img
-                    src={kit.image}
-                    alt="Livro Poemas de Amor para Curar o Mundo"
-                    className="w-full max-w-[500px] drop-shadow-2xl md:-mt-12 md:-mb-12"
-                  />
+                  <img src={kit.image} alt="Livro Poemas de Amor para Curar o Mundo" className="w-full max-w-[500px] drop-shadow-2xl md:-mt-12 md:-mb-12" />
                 </div>
               </div>
-
-              {/* Price */}
               <div className="mt-8 pt-6 border-t border-primary-foreground/30 flex flex-col items-center gap-2 text-center">
-                <p className="font-heading text-6xl md:text-7xl font-extrabold text-primary-foreground">
-                  {kit.price}
-                </p>
+                <p className="font-heading text-6xl md:text-7xl font-black text-primary-foreground">{kit.price}</p>
                 {kit.installments && (
-                  <p className="text-primary-foreground text-lg md:text-xl font-body">
-                    {kit.installments}
-                  </p>
+                  <p className="text-primary-foreground text-lg md:text-xl">{kit.installments}</p>
                 )}
               </div>
             </div>

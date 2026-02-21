@@ -1,18 +1,16 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ActionButtons from "@/components/ActionButtons";
 import VideoSection from "@/components/VideoSection";
 import BienalBanner from "@/components/BienalBanner";
 import AboutSection from "@/components/AboutSection";
-import PoetrySection from "@/components/PoetrySection";
-import ClientesCarousel from "@/components/ClientesCarousel";
 import PremiacaoSection from "@/components/PremiacaoSection";
 import FAQSection from "@/components/FAQSection";
-import BienalGallery from "@/components/BienalGallery";
 import KitsSection from "@/components/KitsSection";
 import InscricaoForm from "@/components/InscricaoForm";
 import QuemSomos from "@/components/QuemSomos";
+import ClientesCarousel from "@/components/ClientesCarousel";
 import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const Index = () => {
   return (
@@ -20,19 +18,16 @@ const Index = () => {
       <Navbar />
       <div id="inicio">
         <HeroSection />
-        <ActionButtons />
         <VideoSection />
       </div>
       <BienalBanner />
       <div id="sobre">
         <AboutSection />
       </div>
-      <PoetrySection />
       <div id="premiacao">
         <PremiacaoSection />
       </div>
       <FAQSection />
-      <BienalGallery />
       <div id="kits">
         <KitsSection />
       </div>
@@ -44,6 +39,7 @@ const Index = () => {
       <div id="contato">
         <Footer />
       </div>
+      <WhatsAppButton />
     </div>
   );
 };
