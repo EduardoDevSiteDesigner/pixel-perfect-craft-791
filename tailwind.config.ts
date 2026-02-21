@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ["Oswald", "sans-serif"],
-        body: ["Open Sans", "sans-serif"],
+        heading: ["Barlow Semi Condensed", "sans-serif"],
+        body: ["Calibri", "Open Sans", "sans-serif"],
         script: ["Dancing Script", "cursive"],
       },
       colors: {

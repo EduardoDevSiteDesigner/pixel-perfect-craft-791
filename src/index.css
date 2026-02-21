@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700;800;900&family=Open+Sans:wght@400;600;700&family=Dancing+Script:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -90,10 +90,11 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground;
+    font-family: 'Calibri', 'Open Sans', sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Barlow Semi Condensed', sans-serif;
   }
 }
 
@@ -111,6 +112,17 @@
   100% {
     top: 105%;
     opacity: 0;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(48 100% 50% / 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(48 100% 50% / 0.7);
+    transform: scale(1.03);
   }
 }
 

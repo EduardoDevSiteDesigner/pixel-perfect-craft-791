@@ -29,7 +29,7 @@ const ClientesCarousel = () => {
   return (
     <section className="bg-primary-foreground py-12 md:py-16">
       <div ref={ref} className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
-        <h3 className="font-heading text-2xl md:text-3xl font-bold text-navy text-center mb-10">
+        <h3 className="font-heading text-3xl md:text-4xl lg:text-5xl font-black text-navy text-center mb-10">
           ALGUNS CLIENTES E PARCEIROS DA ARTICULE NESSES 29 ANOS
         </h3>
 
@@ -39,11 +39,7 @@ const ClientesCarousel = () => {
               {parceiros.map((parceiro, index) => (
                 <CarouselItem key={index} className="basis-1/3 flex items-center justify-center p-4">
                   <div className="flex items-center justify-center h-32 md:h-40">
-                    <img
-                      src={parceiro.image}
-                      alt={parceiro.alt}
-                      className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                    />
+                    <img src={parceiro.image} alt={parceiro.alt} className="max-h-full max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300" />
                   </div>
                 </CarouselItem>
               ))}

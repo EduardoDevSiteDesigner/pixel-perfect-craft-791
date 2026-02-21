@@ -20,7 +20,7 @@ const realizacoes = [
   {
     image: imgFabricaCultural,
     alt: "Fábrica Cultural",
-    text: "Festival realizado de forma itinerante envolvendo bandas de todas as regiões do Brasil (Sudeste, Sul, Centro-Oeste, Norte e Nordeste). Reunimos mais de 3 mil bandas, em shows ao vivo, por palcos no Rio de Janeiro, São Paulo, Minas Gerais, Espírito Santo, Brasília, Santa Catarina e Ceará. Foram 10 anos de festival, onde as bandas vencedoras de cada região se reuniam no palco do Hard Rock Cafe (RJ) para a gravação do CD Coletânea, em cada ano do festival.",
+    text: "Programa social de capacitação de jovens para o mercado cultural realizado há 25 anos (desde 1999) em parceria com a Universidade Castelo Branco, Areninha Carioca Hermeto Pascoal e o Colégio João Paulo I. Em 2001 fomos contemplados no programa Capacitação Solidária, da ONG Comunidade Solidária, presidida pela saudosa ex-primeira dama do Brasil, Srª Ruth Cardoso. Nosso programa já foi patrocinado e reconhecido como Ação Local de grande importância pela Prefeitura da Cidade do Rio de Janeiro.",
   },
   {
     image: imgRockBrasil,
@@ -70,19 +70,13 @@ const QuemSomos = () => {
   return (
     <section className="bg-navy py-12 md:py-16">
       <div ref={ref} className={`container mx-auto px-4 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
-        {/* Header: Title left + Logo right - centered closer together */}
         <div className="flex items-center justify-center gap-8 md:gap-16 mb-8">
-          <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-primary-foreground">
+          <h2 className="font-heading text-4xl md:text-5xl font-black text-primary-foreground">
             QUEM SOMOS
           </h2>
-          <img
-            src={logoArticule}
-            alt="Logo Editora Articule"
-            className="w-32 md:w-48"
-          />
+          <img src={logoArticule} alt="Logo Editora Articule" className="w-48 md:w-64 lg:w-72" />
         </div>
 
-        {/* YouTube Video */}
         <div className="max-w-4xl mx-auto mb-12">
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
             <iframe
@@ -100,7 +94,7 @@ const QuemSomos = () => {
             Em 2026 a Articule completa 29 anos. Responsável pela criação e produção de Projetos Culturais de diversos segmentos, como: Dança, Teatro, Música e Literatura, em diversos formatos: Festivais, Congressos, Seminários, Shows, Publicações Literárias, Ações Educativas e Sociais. Em 2025, a Editora Articule participou como expositora da BIENAL DO LIVRO RIO 2025, recebendo em seu estande, autores de todas as regiões do Brasil, no lançamento das antologias: 'Brasiliê - Coletânea Nacional de Literatura'; 'Poemas de amor para curar o mundo' e 'O livro mágico das histórias fantásticas'.
           </p>
 
-          <h4 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-yellow text-center mt-8">
+          <h4 className="font-heading text-3xl md:text-4xl lg:text-5xl font-black text-yellow text-center mt-16 mb-12">
             PRINCIPAIS REALIZAÇÕES NESSES 29 ANOS DA ARTICULE
           </h4>
 
@@ -108,11 +102,7 @@ const QuemSomos = () => {
             {realizacoes.map((item, index) => (
               <div key={index} className="flex flex-col md:flex-row gap-6 items-start">
                 <div className="flex-shrink-0 w-full md:w-72 lg:w-80">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    className="w-full rounded-lg shadow-lg"
-                  />
+                  <img src={item.image} alt={item.alt} className="w-full rounded-lg shadow-lg" />
                 </div>
                 <div className="flex-1">
                   <p className="text-primary-foreground text-lg leading-relaxed opacity-90" style={{ textAlign: 'justify', hyphens: 'auto' }}>

@@ -16,11 +16,11 @@ const InscricaoForm = () => {
   return (
     <section className="bg-sky py-12 md:py-16">
       <div ref={ref} className={`container mx-auto px-4 max-w-2xl ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
-        <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-navy text-center mb-2">
+        <h2 className="font-heading text-4xl md:text-5xl font-black text-navy text-center mb-2">
           FORMULÁRIO DE INSCRIÇÃO
         </h2>
-        <p className="text-center text-navy text-lg mb-2 font-bold">PARTICIPE!</p>
-        <p className="text-center text-navy mb-8">PREENCHA SEUS DADOS E ANEXE SEU TEXTO.</p>
+        <p className="text-center text-navy text-4xl md:text-5xl mb-2 font-heading font-black">PARTICIPE!</p>
+        <p className="text-center text-navy mb-8 text-xl md:text-2xl font-heading font-bold">PREENCHA SEUS DADOS E ANEXE SEU TEXTO.</p>
 
         <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
           {[
@@ -59,20 +59,11 @@ const InscricaoForm = () => {
           </div>
 
           <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              name="concordo"
-              checked={formData.concordo}
-              onChange={handleChange}
-              className="mt-1 w-5 h-5 accent-magenta"
-            />
+            <input type="checkbox" name="concordo" checked={formData.concordo} onChange={handleChange} className="mt-1 w-5 h-5 accent-magenta" />
             <span className="text-navy">Declaro ter lido e concordar com os termos do regulamento</span>
           </label>
 
-          <button
-            type="submit"
-            className="w-full bg-navy text-primary-foreground font-heading text-xl font-bold py-4 rounded-md hover:bg-navy/90 transition-colors"
-          >
+          <button type="submit" className="w-full bg-navy text-primary-foreground font-heading text-xl font-bold py-4 rounded-md hover:bg-navy/90 transition-colors">
             Enviar
           </button>
         </form>

@@ -2,7 +2,7 @@ import mockupHero from "@/assets/mockup-hero.png";
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden min-h-[80vh] flex items-start pt-2" style={{
+    <section className="relative overflow-hidden min-h-[70vh] flex items-start pt-0" style={{
       background: 'linear-gradient(135deg, hsl(280 60% 25%), hsl(300 50% 35%), hsl(270 55% 45%), hsl(290 40% 55%))'
     }}>
       {/* Falling sparkle particles */}
@@ -28,16 +28,16 @@ const HeroSection = () => {
         })}
       </div>
 
-      <div className="container mx-auto px-4 py-2 relative z-10">
-        <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+      <div className="container mx-auto px-4 py-0 relative z-10">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
           <div className="flex-1 text-primary-foreground text-center md:text-left">
-            <p className="font-heading text-2xl md:text-3xl tracking-widest mb-4 opacity-80">
+            <p className="font-heading text-2xl md:text-3xl tracking-widest mb-3 opacity-80">
               ANTOLOGIA 2026
             </p>
-            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight mb-4 whitespace-nowrap">
+            <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-3 whitespace-nowrap">
               UM NOVO CHAMADO<br />A TODOS OS POETAS.
             </h1>
-            <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow leading-tight mb-10 whitespace-nowrap">
+            <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow leading-tight mb-8 whitespace-nowrap">
               LANÇAMENTO NA BIENAL<br />SÃO PAULO 2026.
             </h2>
             <a
@@ -50,7 +50,7 @@ const HeroSection = () => {
           <div className="flex-shrink-0 w-[350px] md:w-[600px] lg:w-[800px] xl:w-[950px] md:-ml-16 lg:-ml-24">
             <img
               src={mockupHero}
-              alt="Livro Poemas de Amor para Curar o Mundo - Volume II"
+              alt="Livro Poemas de Amor para Curar o Mundo - Volume 2"
               className="w-full drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
           </div>
