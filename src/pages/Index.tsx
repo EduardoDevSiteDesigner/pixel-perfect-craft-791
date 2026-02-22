@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import BienalBanner from "@/components/BienalBanner";
-import AboutSection from "@/components/AboutSection";
+
 import PremiacaoSection from "@/components/PremiacaoSection";
 import RegulamentoSection from "@/components/RegulamentoSection";
 import FAQSection from "@/components/FAQSection";
@@ -20,9 +20,6 @@ const Index = () => {
         <HeroSection />
       </div>
       <BienalBanner />
-      <div id="sobre">
-        <AboutSection />
-      </div>
       <div id="premiacao">
         <PremiacaoSection />
       </div>
