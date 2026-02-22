@@ -4,7 +4,7 @@ const InscricaoForm = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section className="bg-sky py-20 md:py-28">
+    <section className="bg-sky py-32 md:py-48">
       <div ref={ref} className={`container mx-auto px-4 max-w-4xl ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <h2 className="font-heading text-4xl md:text-5xl font-black text-navy text-center mb-2">
           FORMULÁRIO DE INSCRIÇÃO
