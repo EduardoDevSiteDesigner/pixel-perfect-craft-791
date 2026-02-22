@@ -10,7 +10,7 @@ import InscricaoForm from "@/components/InscricaoForm";
 import QuemSomos from "@/components/QuemSomos";
 import ClientesCarousel from "@/components/ClientesCarousel";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+
 
 const Index = () => {
   return (
@@ -36,7 +36,7 @@ const Index = () => {
       <div id="contato">
         <Footer />
       </div>
-      <WhatsAppButton />
+      
     </div>
   );
 };
