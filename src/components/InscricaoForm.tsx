@@ -5,6 +5,7 @@ import { z } from "zod";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 import { Upload, X, FileText, Loader2, CheckCircle2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const WEBHOOK_URL = "https://n8n-n8n.s7gbvq.easypanel.host/webhook/poemas";
 
@@ -103,6 +104,42 @@ const InscricaoForm = () => {
 
     setIsSubmitting(true);
     try {
+      // Upload files to storage
+      const fileUrls: string[] = [];
+      for (const file of files) {
+        const fileName = `${Date.now()}-${file.name}`;
+        const { error: uploadError } = await supabase.storage
+          .from("inscricoes-files")
+          .upload(fileName, file);
+        if (uploadError) throw uploadError;
+        const { data: urlData } = supabase.storage
+          .from("inscricoes-files")
+          .getPublicUrl(fileName);
+        fileUrls.push(urlData.publicUrl);
+      }
+
+      // Save to database
+      const { error: dbError } = await supabase.from("inscricoes").insert({
+        first_name: data.first_name,
+        last_name: data.last_name,
+        email: data.email,
+        country: data.country,
+        cep: data.cep,
+        estado: data.estado,
+        cidade: data.cidade,
+        bairro: data.bairro,
+        endereco: data.endereco,
+        numero: data.numero,
+        complemento: data.complemento || null,
+        cpf: data.cpf,
+        ddd_pais: data.ddd_pais || "+55",
+        telefone: data.telefone,
+        titulo_poema: data.titulo_poema || null,
+        file_urls: fileUrls,
+      });
+      if (dbError) throw dbError;
+
+      // Also send to webhook
       const formData = new FormData();
       Object.entries(data).forEach(([key, value]) => {
         if (value !== undefined && value !== null) {
@@ -112,13 +149,7 @@ const InscricaoForm = () => {
       files.forEach((file, i) => {
         formData.append(`file_${i}`, file);
       });
-
-      const response = await fetch(WEBHOOK_URL, {
-        method: "POST",
-        body: formData,
-      });
-
-      if (!response.ok) throw new Error("Erro no envio");
+      fetch(WEBHOOK_URL, { method: "POST", body: formData }).catch(() => {});
 
       setIsSubmitted(true);
       toast({ title: "Inscrição enviada!", description: "Seu poema foi enviado com sucesso." });
