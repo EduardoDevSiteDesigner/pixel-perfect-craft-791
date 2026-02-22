@@ -36,7 +36,7 @@ const HeroSection = () => {
       <img
         src={flowerCorner}
         alt=""
-        className="absolute bottom-0 left-0 w-32 md:w-48 lg:w-56 pointer-events-none z-10 opacity-80"
+        className="absolute bottom-0 left-0 w-72 md:w-96 lg:w-[28rem] pointer-events-none z-10 opacity-80"
       />
 
       <div className="container mx-auto px-4 pt-12 pb-0 relative z-10">
