@@ -1,9 +1,9 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import VideoSection from "@/components/VideoSection";
 import BienalBanner from "@/components/BienalBanner";
 import AboutSection from "@/components/AboutSection";
 import PremiacaoSection from "@/components/PremiacaoSection";
+import RegulamentoSection from "@/components/RegulamentoSection";
 import FAQSection from "@/components/FAQSection";
 import KitsSection from "@/components/KitsSection";
 import InscricaoForm from "@/components/InscricaoForm";
@@ -18,7 +18,6 @@ const Index = () => {
       <Navbar />
       <div id="inicio">
         <HeroSection />
-        <VideoSection />
       </div>
       <BienalBanner />
       <div id="sobre">
@@ -27,6 +26,7 @@ const Index = () => {
       <div id="premiacao">
         <PremiacaoSection />
       </div>
+      <RegulamentoSection />
       <FAQSection />
       <div id="kits">
         <KitsSection />

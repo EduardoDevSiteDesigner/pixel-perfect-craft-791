@@ -17,19 +17,15 @@ const AboutSection = () => {
               />
             </div>
             <div className="flex-1">
-              <h2 className="font-heading text-3xl md:text-5xl font-extrabold text-navy text-left leading-tight mb-8">
-                DESCUBRA POR QUE<br />O MUNDO PRECISA<br />DOS POETAS.
-              </h2>
+              <div className="text-navy text-xl md:text-2xl leading-relaxed space-y-6" style={{ textAlign: 'justify', hyphens: 'auto' }}>
+                <p>
+                  A antologia <strong>'POEMAS DE AMOR PARA CURAR O MUNDO'</strong> é um verdadeiro <strong>CHAMADO PARA POETAS.</strong>
+                </p>
+                <p>
+                  O mundo, atravessado por conflitos, desigualdades e desencontros, parece estar em um estado constante de turbulência. A solução pode parecer inalcançável, mas talvez a resposta esteja naquilo que nos torna mais humanos: <strong>O AMOR.</strong>
+                </p>
+              </div>
             </div>
-          </div>
-
-          <div className="text-navy text-xl md:text-2xl leading-relaxed space-y-6 max-w-4xl mx-auto" style={{ textAlign: 'justify', hyphens: 'auto' }}>
-            <p>
-              A antologia <strong>'POEMAS DE AMOR PARA CURAR O MUNDO'</strong> é um verdadeiro <strong>CHAMADO PARA POETAS.</strong>
-            </p>
-            <p>
-              O mundo, atravessado por conflitos, desigualdades e desencontros, parece estar em um estado constante de turbulência. A solução pode parecer inalcançável, mas talvez a resposta esteja naquilo que nos torna mais humanos: <strong>O AMOR.</strong>
-            </p>
           </div>
         </div>
       </div>

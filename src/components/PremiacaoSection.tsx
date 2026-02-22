@@ -1,4 +1,5 @@
-import authorSigning from "@/assets/author-signing.jpg";
+import premiacaoPhoto1 from "@/assets/premiacao-photo1.jpg";
+import premiacaoPhoto2 from "@/assets/premiacao-photo2.jpg";
 import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const PremiacaoSection = () => {
@@ -34,9 +35,14 @@ const PremiacaoSection = () => {
       <div ref={ref} className={`container mx-auto px-4 relative z-10 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <h2 className="font-heading text-5xl md:text-7xl font-black text-primary-foreground mb-8">PREMIAÇÃO</h2>
 
-        <div className="max-w-3xl mx-auto mb-12">
-          <div className="border-4 border-primary-foreground rounded-lg overflow-hidden shadow-xl">
-            <img src={authorSigning} alt="Autor autografando livro" className="w-full h-96 md:h-[600px] object-cover" />
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="border-4 border-primary-foreground rounded-lg overflow-hidden shadow-xl">
+              <img src={premiacaoPhoto1} alt="Autora na Bienal" className="w-full h-72 md:h-[500px] object-cover" />
+            </div>
+            <div className="border-4 border-primary-foreground rounded-lg overflow-hidden shadow-xl">
+              <img src={premiacaoPhoto2} alt="Autoras na Bienal" className="w-full h-72 md:h-[500px] object-cover" />
+            </div>
           </div>
         </div>
 
@@ -47,17 +53,9 @@ const PremiacaoSection = () => {
           <p className="font-heading text-2xl md:text-3xl lg:text-4xl text-yellow mb-6">
             GANHARÁ A PUBLICAÇÃO DE SEU LIVRO PELA ARTICULE
           </p>
-          <p className="text-lg leading-relaxed opacity-90 max-w-4xl" style={{ textAlign: 'justify', hyphens: 'auto' }}>
+          <p className="text-xl md:text-2xl leading-relaxed opacity-90 max-w-4xl" style={{ textAlign: 'justify', hyphens: 'auto' }}>
             Todos os autores participantes da antologia 'POEMAS DE AMOR PARA CURAR O MUNDO - volume 2' estarão automaticamente concorrendo a seguinte premiação: A Editora Articule publicará o livro do autor que conquistar o primeiro lugar entre os poemas da antologia. O livro será produzido no formato impresso e terá cerimônia de lançamento organizada pela editora Articule.
           </p>
-        </div>
-
-        {/* Regulamento button in full-width white box */}
-        <div className="bg-primary-foreground w-full py-8 flex flex-col items-center gap-2 rounded-lg">
-          <button className="bg-magenta text-primary-foreground font-heading text-4xl md:text-6xl font-bold py-8 px-24 rounded-full hover:bg-magenta/90 transition-colors shadow-lg">
-            REGULAMENTO
-          </button>
-          <p className="text-navy mt-3 text-sm">Clique no botão acima e leia o REGULAMENTO.</p>
         </div>
       </div>
     </section>
