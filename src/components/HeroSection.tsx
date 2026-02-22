@@ -1,8 +1,12 @@
-import mockupHero from "@/assets/mockup-hero.png";
+import mockupHero from "@/assets/mockup-hero-new.png";
+import flowerCorner from "@/assets/flower-corner.png";
+import useScrollAnimation from "@/hooks/useScrollAnimation";
 
 const HeroSection = () => {
+  const { ref, isVisible } = useScrollAnimation();
+
   return (
-    <section className="relative overflow-hidden min-h-[70vh] flex items-start pt-0" style={{
+    <section className="relative overflow-hidden min-h-[70vh] flex flex-col" style={{
       background: 'linear-gradient(135deg, hsl(280 60% 25%), hsl(300 50% 35%), hsl(270 55% 45%), hsl(290 40% 55%))'
     }}>
       {/* Falling sparkle particles */}
@@ -28,6 +32,13 @@ const HeroSection = () => {
         })}
       </div>
 
+      {/* Flower corner bottom-left */}
+      <img
+        src={flowerCorner}
+        alt=""
+        className="absolute bottom-0 left-0 w-32 md:w-48 lg:w-56 pointer-events-none z-10 opacity-80"
+      />
+
       <div className="container mx-auto px-4 py-0 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
           <div className="flex-1 text-primary-foreground text-center md:text-left">
@@ -47,11 +58,26 @@ const HeroSection = () => {
               INSCREVA-SE AGORA
             </a>
           </div>
-          <div className="flex-shrink-0 w-[220px] md:w-[320px] lg:w-[420px] xl:w-[500px] md:-ml-16 lg:-ml-24">
+          <div className="flex-shrink-0 w-[180px] md:w-[260px] lg:w-[340px] xl:w-[400px] md:-ml-16 lg:-ml-24">
             <img
               src={mockupHero}
               alt="Livro Poemas de Amor para Curar o Mundo - Volume 2"
               className="w-full drop-shadow-2xl transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Video section integrated into hero */}
+      <div ref={ref} className={`container mx-auto px-4 py-12 relative z-10 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
+        <div className="max-w-4xl mx-auto">
+          <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/urz9Y0mN15s"
+              title="Poemas de Amor para Curar o Mundo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
             />
           </div>
         </div>

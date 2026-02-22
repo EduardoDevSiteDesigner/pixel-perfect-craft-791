@@ -73,7 +73,7 @@ const BienalBanner = () => {
 
         <a
           href="#inscricao"
-          className="inline-block bg-primary-foreground text-navy font-heading text-xl md:text-2xl font-bold py-5 px-12 rounded-full hover:bg-primary-foreground/90 transition-colors shadow-lg"
+          className="inline-block bg-primary-foreground text-navy font-heading text-2xl md:text-4xl font-bold py-6 px-16 rounded-full hover:bg-primary-foreground/90 transition-colors shadow-lg"
           style={{ animation: 'pulse-glow 2s ease-in-out infinite' }}
         >
           GARANTIR MINHA VAGA NA BIENAL SÃO PAULO 2026
