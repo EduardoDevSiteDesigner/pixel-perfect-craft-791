@@ -9,7 +9,7 @@ const Navbar = () => {
         </div>
         <a
           href="#inscricao"
-          className="inline-block bg-yellow text-navy font-heading text-base md:text-xl font-bold py-3 px-8 md:px-10 hover:bg-yellow/90 transition-colors rounded-full whitespace-nowrap"
+          className="inline-block bg-yellow text-navy font-heading text-xs py-2 px-5 md:text-xl md:py-3 md:px-10 font-bold hover:bg-yellow/90 transition-colors rounded-full whitespace-nowrap"
         >
           INSCREVA-SE AGORA
         </a>

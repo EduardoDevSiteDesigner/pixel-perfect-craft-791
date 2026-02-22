@@ -19,13 +19,13 @@ const KitsSection = () => {
           SOMENTE PARA AUTORES SELECIONADOS
         </p>
 
-        <div className="flex flex-col gap-8 max-w-5xl mx-auto">
+        <div className="flex flex-col gap-10 max-w-6xl mx-auto">
           {kits.map((kit, index) => (
             <div key={index} className="w-full">
               <img
                 src={kit}
                 alt={`Kit de publicação ${index + 1}`}
-                className="w-full rounded-lg shadow-xl"
+                className="w-full rounded-lg"
               />
             </div>
           ))}
