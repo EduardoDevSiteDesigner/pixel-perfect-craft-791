@@ -4,25 +4,150 @@ import useScrollAnimation from "@/hooks/useScrollAnimation";
 const faqItems = [
   {
     question: "TODOS OS AUTORES PARTICIPANTES DA ANTOLOGIA TERÃO PERÍODO PARA AUTÓGRAFOS NA BIENAL DO LIVRO SÃO PAULO 2026?",
-    answer: "Sim. Todos os autores dos textos selecionados, que enviarem corretamente preenchida e assinada a CARTA DE ADESÃO e realizarem o pagamento do Kit de publicação de sua escolha: terão seus textos publicados no livro POEMAS DE AMOR PARA CURAR O MUNDO – volume 2 - 2026; participarão como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO SP 2026; estarão automaticamente concorrendo à PREMIAÇÃO. Todos os autores participantes receberão credenciais de autor para entrada na Bienal do Livro SP 2026."
+    answer: (
+      <div className="space-y-4">
+        <p>Sim. Todos os autores dos textos selecionados, que enviarem corretamente preenchida e assinada a CARTA DE ADESÃO e realizarem o pagamento do Kit de publicação de sua escolha:</p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>terão seus textos publicados no livro POEMAS DE AMOR PARA CURAR O MUNDO – volume 2 - 2026;</li>
+          <li>participarão como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO SP 2026;</li>
+          <li>estarão automaticamente concorrendo à PREMIAÇÃO.</li>
+        </ul>
+        <p>Todos os autores participantes receberão credenciais de autor para entrada na Bienal do Livro SP 2026.</p>
+        <p>Será de inteira responsabilidade dos autores, transporte de seu local de origem ao Lançamento do livro 'POEMAS DE AMOR PARA CURAR O MUNDO' volume 2 na BIENAL DO LIVRO SÃO PAULO 2026; e de seu retorno, assim como de hospedagem, caso se faça necessária.</p>
+      </div>
+    )
   },
   {
     question: "A CHANCE DE PUBLICAR SEU PRÓPRIO LIVRO (PREMIAÇÃO)",
-    answer: "Todos os autores estarão automaticamente concorrendo à PREMIAÇÃO, que inclui a Publicação de um livro completo do(a) autor(a) vencedor(a) pela Editora Articule. Esta obra terá versão impressa (100 exemplares) e deverá ter no máximo 100 páginas. A Editora Articule será responsável por: edição de texto (copidesque); diagramação (projeto gráfico); revisão final; registro ISBN e ficha catalográfica; produção gráfica; impressão; organização da cerimônia de lançamento do livro."
+    answer: (
+      <div className="space-y-4">
+        <p>Todos os autores estarão automaticamente concorrendo à PREMIAÇÃO, que inclui a Publicação de um livro completo do(a) autor(a) vencedor(a) pela Editora Articule. Esta obra terá versão impressa (100 exemplares) e deverá ter no máximo: 100 páginas. A Editora Articule será responsável por:</p>
+        <ul className="list-disc pl-10 space-y-2">
+          <li>edição de texto (copidesque);</li>
+          <li>diagramação (projeto gráfico);</li>
+          <li>revisão final;</li>
+          <li>registro ISBN e ficha catalográfica;</li>
+          <li>produção gráfica;</li>
+          <li>impressão;</li>
+          <li>organização da cerimônia de lançamento do livro.</li>
+        </ul>
+      </div>
+    )
   },
-  { question: "QUAL O TEMA DA ANTOLOGIA?", answer: "O tema é AMOR e serão aceitos textos inéditos no gênero: POEMA. 'Um POEMA DE AMOR não fala apenas de romance, mas também de empatia, compaixão, ternura e esperança. Esses elementos, quando semeados no coração das pessoas, podem gerar mudanças significativas na forma como nos relacionamos uns com os outros e com o mundo ao nosso redor.'" },
-  { question: "CIRCULAÇÃO DO LIVRO POR TODO O BRASIL (DIVULGAÇÃO)", answer: "Reunimos poetas de todas as regiões do país: Norte, Nordeste, Centro-Oeste, Sudeste e Sul. Um livro que automaticamente circula e é distribuído por todo o Brasil." },
-  { question: "QUEM PODE PARTICIPAR?", answer: "Podem participar autores de qualquer nacionalidade residentes no Brasil e brasileiros residentes no exterior, que tenham idade mínima de 16 anos, completos a partir da data de inscrição. Menores de 18 anos deverão enviar a autorização de responsável legal para a organização." },
-  { question: "É POSSÍVEL INSCREVER TEXTOS DE MAIS DE UM AUTOR(A)?", answer: "Não. Cada inscrição deverá ser feita, obrigatoriamente, por um único autor. Não será aceita coautoria." },
-  { question: "QUANTOS TEXTOS CADA AUTOR PODE INSCREVER?", answer: "Os autores podem inscrever até 05 (cinco) poemas. Nesse caso, devem realizar uma inscrição para cada um dos textos." },
-  { question: "A INSCRIÇÃO É GRATUITA? QUAL O PRAZO DE INSCRIÇÃO?", answer: "As inscrições são GRATUITAS e podem ser feitas até 28 DE MARÇO DE 2026, mediante preenchimento de formulário e envio do texto. O formulário pode ser encontrado no site: articule.art.br/poemasdeamor" },
-  { question: "COMO FAÇO A MINHA INSCRIÇÃO?", answer: "Preencha completamente o FORMULÁRIO DE INSCRIÇÃO com seus dados, incluindo o ENVIO DE SEU TEXTO. O formulário pode ser encontrado no site articule.art.br/poemasdeamor" },
-  { question: "EXISTE ALGUM FORMATO E REGRA PARA O ENVIO DO TEXTO?", answer: "Sim. Os textos devem ser escritos em língua portuguesa no seguinte formato: extensão máxima de 1 (uma) página com até 30 linhas; digitados em página tamanho A4, com margens de 3 cm, fonte Times New Roman tamanho 12. Espaçamento entre as linhas é livre. Os arquivos devem ser anexados em formato WORD. O título do texto deve constar na parte superior da página, alinhado à esquerda." },
-  { question: "PAGAMENTO DO KIT DE PUBLICAÇÃO", answer: "Ao ter seu texto aprovado, para que ele esteja confirmado na antologia, é necessário adquirir um kit. Ele ajuda no custeio da produção editorial (Revisão, diagramação, ficha catalográfica, registros, arte-final, produção gráfica e impressão) e garante ao autor, exemplares e brindes a preço de atacado, podendo ser revendido com lucro. O autor só pagará pelo kit após ter seu texto aprovado." },
-  { question: "VALOR DOS KITS PARA PUBLICAÇÃO APÓS TEXTO SER APROVADO", answer: "KIT BRONZE: R$ 297,00 (ou 12x R$ 30,22) — 02 livros + 02 marcadores + autógrafos na Bienal + frete grátis + certificado. KIT PRATA: R$ 594,00 (ou 12x R$ 60,44) — 04 livros + 04 marcadores + autógrafos + frete grátis + certificado + 03 fotos profissionais. KIT OURO: R$ 891,00 (ou 12x R$ 90,67) — 06 livros + 06 marcadores + autógrafos + frete grátis + certificado + 03 fotos profissionais. KIT DIAMANTE: R$ 1.485,00 (ou 12x R$ 151,11) — 10 livros + 10 marcadores + autógrafos + frete grátis + certificado + 03 fotos profissionais + gravação em áudio por locutor(a) profissional." },
-  { question: "VENDA E DIREITOS AUTORAIS", answer: "Os direitos autorais permanecerão com o autor(a), que poderá usar seu texto livremente após a publicação. O autor concede à Editora Articule o direito de publicação do texto, somente no livro POEMAS DE AMOR PARA CURAR O MUNDO – volume 2 – 2026. Não serão repassados royalties de vendas dos exemplares. No entanto, trabalhamos com exemplares em preços de atacado para que os participantes possam comercializar e obter lucro com a revenda dos livros." },
-  { question: "CRONOGRAMA", answer: "Período de Inscrições: 23 FEV a 27 MAR 2026. Divulgação lista AUTORES que irão compor a antologia: 08 MAI 2026. Divulgação lista de AUTORES FINALISTAS: 15 MAI 2026. Divulgação lista de AUTORES VENCEDORES: 22 MAI 2026. Agendamento Sessão Autógrafos na Bienal SP 2026: 19 MAI a 12 JUN 2026. Envio dos livros pelos CORREIOS: 06 JUL a 07 AGO 2026. LANÇAMENTO NA BIENAL DO LIVRO SÃO PAULO 2026: 04 a 13 SET 2026." },
-  { question: "FRETE GRATUITO PARA TODO BRASIL", answer: "O frete fixo gratuito já estará incluso para todo o Brasil, e será entregue via Correios (via impresso módico) ou através da transportadora e empresa de logística atuante em todo território brasileiro. Uma segunda tentativa de envio, caso o pacote retorne à editora, será cotado e cobrado à parte." },
+  {
+    question: "QUAL O TEMA DA ANTOLOGIA?",
+    answer: (
+      <div className="space-y-4">
+        <p>O tema é AMOR e serão aceitos textos inéditos no gênero: POEMA.</p>
+        <p className="italic">'Um POEMA DE AMOR não fala apenas de romance, mas também de empatia, compaixão, ternura e esperança. Esses elementos, quando semeados no coração das pessoas, podem gerar mudanças significativas na forma como nos relacionamos uns com os outros e com o mundo ao nosso redor.'</p>
+      </div>
+    )
+  },
+  {
+    question: "CIRCULAÇÃO DO LIVRO POR TODO O BRASIL (DIVULGAÇÃO)",
+    answer: (
+      <p>Reunimos poetas de todas as regiões do país: Norte, Nordeste, Centro-Oeste, Sudeste e Sul. Um livro que automaticamente circula e é distribuído por todo o Brasil.</p>
+    )
+  },
+  {
+    question: "QUEM PODE PARTICIPAR?",
+    answer: (
+      <div className="space-y-4">
+        <p>Podem participar, dessa antologia, autores de qualquer nacionalidade residentes no Brasil e brasileiros residentes no exterior, que tenham idade mínima de 16 anos, completos a partir da data de inscrição.</p>
+        <p>Menores de 18 anos deverão enviar a autorização de responsável legal para a organização. O modelo de autorização pode ser solicitado pelo whatsApp (21) 99472-8748.</p>
+      </div>
+    )
+  },
+  {
+    question: "É POSSÍVEL INSCREVER TEXTOS DE MAIS DE UM AUTOR(A)?",
+    answer: (
+      <p>Não. Cada inscrição deverá ser feita, obrigatoriamente, por um único autor. Não será aceita coautoria.</p>
+    )
+  },
+  {
+    question: "QUANTOS TEXTOS CADA AUTOR PODE INSCREVER?",
+    answer: (
+      <p>Os autores podem inscrever até 05 (cinco) poemas. Nesse caso, devem realizar uma inscrição para cada um dos textos.</p>
+    )
+  },
+  {
+    question: "A INSCRIÇÃO É GRATUITA? QUAL O PRAZO DE INSCRIÇÃO?",
+    answer: (
+      <div className="space-y-4">
+        <p>As inscrições são GRATUITAS e podem ser feitas até 28 DE MARÇO DE 2026, mediante preenchimento de formulário e envio do texto. O formulário pode ser encontrado no site:</p>
+        <p><a href="https://articule.art.br/poemasdeamor" className="text-accent underline" target="_blank" rel="noopener noreferrer">articule.art.br/poemasdeamor</a></p>
+      </div>
+    )
+  },
+  {
+    question: "EXISTE ALGUM FORMATO E REGRA PARA O ENVIO DO TEXTO?",
+    answer: (
+      <div className="space-y-4">
+        <p>Sim. Os textos devem ser escritos em língua portuguesa no seguinte formato:</p>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>A extensão máxima dos textos é de 1 (uma) página com até 30 linhas;</li>
+          <li>digitados em página tamanho A4,</li>
+          <li>com margens de 3 cm,</li>
+          <li>fonte Times New Roman tamanho 12</li>
+          <li>espaçamento entre as linhas é livre.</li>
+          <li>Os arquivos devem ser anexados em formato WORD. O título do texto deve constar na parte superior da página, alinhado à esquerda.</li>
+        </ul>
+      </div>
+    )
+  },
+  {
+    question: "PAGAMENTO DO KIT DE PUBLICAÇÃO",
+    answer: (
+      <div className="space-y-4">
+        <p>Ao ter seu texto aprovado, para que ele esteja confirmado na antologia, é necessário adquirir um kit. Ele ajuda no custeio da produção editorial (Revisão, diagramação, ficha catalográfica, registros, arte-final, produção gráfica e impressão) e garante ao autor, exemplares e brindes a preço de atacado, podendo ser revendido com lucro.</p>
+        <p>Ao enviar seu(s) texto(s), o(a) autor(a) concorda que terá de arcar com o pagamento do KIT de sua escolha, caso seja selecionado.</p>
+        <p className="italic">*O autor só pagará pelo kit após ter seu texto aprovado.</p>
+        <p className="font-bold mt-4">VALOR DOS KITS PARA PUBLICAÇÃO APÓS TEXTO SER APROVADO:</p>
+        <p>O(a) autor(a) poderá optar por um dos KITS:</p>
+        <ul className="list-disc pl-6 space-y-4">
+          <li><strong>KIT BRONZE: R$ 297,00</strong> (ou 12 x 30,22 no cartão de crédito)<br />que inclui: 01 (um) texto a ser publicado no livro impresso + 02 (dois) livros impressos POEMAS DE AMOR PARA CURAR O MUNDO (volume 2) + 02 (dois) marcadores POEMAS DE AMOR PARA CURAR O MUNDO (volume 2) + Participação como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026 + Envio dos livros pelos Correios. Frete Grátis (Brasil) + Certificado de participação.</li>
+          <li><strong>KIT PRATA: R$ 594,00</strong> (ou 12 x 60,44 no cartão de crédito)<br />que inclui: 01 (um) texto a ser publicado no livro impresso + 04 (quatro) livros impressos POEMAS DE AMOR PARA CURAR O MUNDO (volume 2) + 04 (quatro) marcadores POEMAS DE AMOR PARA CURAR O MUNDO (volume 2) + Participação como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026 + Envio dos livros pelos Correios. Frete Grátis (Brasil) + Certificado de participação + Fotografia profissional (03 fotos digitais) de sua participação como autor(a) no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026.</li>
+          <li><strong>KIT OURO: R$ 891,00</strong> (ou 12 x 90,67 no cartão de crédito)<br />que inclui: 01 (um) texto a ser publicado no livro impresso + 06 (seis) livros impressos POEMAS DE AMOR PARA CURAR O MUNDO (volume 2) + 06 (seis) marcadores POEMAS DE AMOR PARA CURAR O MUNDO (volume 2) + Participação como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026 + Envio dos livros pelos Correios. Frete Grátis (Brasil) + Certificado de participação + Fotografia profissional (03 fotos digitais) de sua participação como autor(a) no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026.</li>
+          <li><strong>KIT DIAMANTE: R$ 1.485,00</strong> (ou 12 x 151,11 no cartão de crédito)<br />que inclui: 01 (um) texto a ser publicado no livro impresso + 10 (dez) livros impressos POEMAS DE AMOR PARA CURAR O MUNDO (volume 2) + 10 (dez) marcadores POEMAS DE AMOR PARA CURAR O MUNDO (volume 2) + Participação como autor(a), com período para autógrafos no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026 + Envio dos livros pelos Correios. Frete Grátis (Brasil) + Certificado de participação + Fotografia profissional (03 fotos digitais) de sua participação como autor(a) no estande da Editora Articule na BIENAL DO LIVRO SÃO PAULO 2026 + Gravação do seu texto em áudio por locutor(a) profissional (em estúdio).</li>
+        </ul>
+      </div>
+    )
+  },
+  {
+    question: "VENDA E DIREITOS AUTORAIS",
+    answer: (
+      <div className="space-y-4">
+        <p>A Editora envia a quantidade de exemplares adquiridos do livro impresso para cada autor selecionado, por isso cobramos o kit de publicação por texto, para a impressão e custos com os serviços de primeira edição como: revisão gramatical, capa profissional, diagramação e projeto gráfico profissional, registro na Câmara Brasileira do Livro, impressão, etc.</p>
+        <p>Os direitos autorais permanecerão com o autor(a), que poderá usar seu texto livremente após a publicação. O autor concede à Editora Articule o direito de publicação do texto, somente no LIVRO: POEMAS DE AMOR PARA CURAR O MUNDO – volume 2 – 2026.</p>
+        <p>Por se tratar de antologias com dezenas de participantes, não serão repassados royalties de vendas dos exemplares da edição que será comercializada pela Editora no site, livrarias e/ou feiras. No entanto, sempre trabalhamos com exemplares em preços de atacado para que os participantes possam comercializar e, dependendo da tiragem adquirida, obterem lucro com a revenda dos livros, além da recuperação do investimento inicial. Em contrapartida, promoveremos a obra em feiras, sessão de autógrafos coletivas e Bienais do Livro com participação gratuita para todos autores da antologia.</p>
+      </div>
+    )
+  },
+  {
+    question: "CRONOGRAMA",
+    answer: (
+      <div className="space-y-2">
+        <p>a. Período de Inscrições - 23 FEV A 27 MAR 2025</p>
+        <p>b. Divulgação lista AUTORES que irão compor a antologia - 08 MAI 2026</p>
+        <p>c. Divulgação lista de AUTORES FINALISTAS - 15 MAI 2026</p>
+        <p>d. Divulgação lista de AUTORES VENCEDORES - 22 MAI 2026</p>
+        <p>e. Agendamento Sessão Autógrafos na Bienal SP 2026 - 19 MAI A 12 JUN 2026</p>
+        <p>f. Envio dos livros (kits de publicação) pelos CORREIOS - 06 JUL A 07 AGO 2026</p>
+        <p>g. LANÇAMENTO NA BIENAL DO LIVRO SÃO PAULO 2026 - DE 04 A 13 SET 2026</p>
+      </div>
+    )
+  },
+  {
+    question: "FRETE GRATUITO PARA TODO BRASIL",
+    answer: (
+      <div className="space-y-4">
+        <ul className="list-disc pl-6 space-y-2">
+          <li>O FRETE FIXO GRATUITO já estará incluso para todo o BRASIL, e será entregue via Correios (via impresso módico) ou através da transportadora e empresa de logística atuante em todo território brasileiro.</li>
+          <li>Uma segunda tentativa de envio, caso o pacote retorne à editora, será cotado e cobrado à parte.</li>
+        </ul>
+      </div>
+    )
+  },
 ];
 
 const FAQSection = () => {

@@ -39,10 +39,10 @@ const HeroSection = () => {
         className="absolute bottom-0 left-0 w-32 md:w-48 lg:w-56 pointer-events-none z-10 opacity-80"
       />
 
-      <div className="container mx-auto px-4 py-0 relative z-10">
+      <div className="container mx-auto px-4 pt-12 pb-0 relative z-10">
         <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
           <div className="flex-1 text-primary-foreground text-center md:text-left">
-            <p className="font-heading text-2xl md:text-3xl tracking-widest mb-3 opacity-80">
+            <p className="font-heading text-2xl md:text-3xl tracking-widest mb-8 opacity-80">
               ANTOLOGIA 2026
             </p>
             <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight mb-3 whitespace-nowrap">
@@ -58,7 +58,7 @@ const HeroSection = () => {
               INSCREVA-SE AGORA
             </a>
           </div>
-          <div className="flex-shrink-0 w-[180px] md:w-[260px] lg:w-[340px] xl:w-[400px] md:-ml-16 lg:-ml-24">
+          <div className="flex-shrink-0 w-[360px] md:w-[520px] lg:w-[680px] xl:w-[800px] md:-ml-16 lg:-ml-24">
             <img
               src={mockupHero}
               alt="Livro Poemas de Amor para Curar o Mundo - Volume 2"
@@ -69,7 +69,7 @@ const HeroSection = () => {
       </div>
 
       {/* Video section integrated into hero */}
-      <div ref={ref} className={`container mx-auto px-4 py-12 relative z-10 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
+      <div ref={ref} className={`container mx-auto px-4 pt-16 pb-12 relative z-10 ${isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
         <div className="max-w-4xl mx-auto">
           <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
             <iframe
